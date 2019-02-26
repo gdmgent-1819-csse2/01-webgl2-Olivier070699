@@ -1,13 +1,13 @@
 export default class Matrix2
 {
     constructor() {
-        this.items = itmes || [
+        this.items = items || [
             a[0], a[1],
             a[2], a[3],
         ]
     }
 
-    add(b)
+    add2(b)
     {
         const a = this.items
         this.items = [
@@ -17,7 +17,7 @@ export default class Matrix2
     }
 
 
-    sub(b)
+    sub2(b)
     {
         const a = this.items
         this.items = [
@@ -27,21 +27,21 @@ export default class Matrix2
     }
 
 
-    mul(b)
+    mul2(b)
     {
         const a = this.items
         const c = []
 
         this.items = [
-            c[0] = a[0] * b[0] + a[1] * b[3]
-            c[1] = a[0] * b[0] + a[1] * b[3]
-            c[2] = a[2] * b[0] + a[3] * b[2]
-            c[3] = a[2] * b[0] + a[3] * b[2]
+            c[0] = a[0] * b[0] + a[1] * b[3],
+            c[1] = a[0] * b[0] + a[1] * b[3],
+            c[2] = a[2] * b[0] + a[3] * b[2],
+            c[3] = a[2] * b[0] + a[3] * b[2],
             this.items = c,
         ]
     }
 
-    rot(d){
+    rot2(d){
         d *= Math.PI / 180;
         const cos = Math.cos(d);
         const sin = Math.sin(d);
@@ -50,6 +50,6 @@ export default class Matrix2
             cos, -sin,
             sin, cos,
         ]
-        this.multiplyM2(result);
+        this.mul2(result);
     }
 }

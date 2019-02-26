@@ -11,26 +11,26 @@ export default class Vector2
         this.y = Number(y) || 0;
     }
 
-    norm() {
+    norm2() {
         return Math.sqrt(this.x**2 + this.y**2)
     }
 
-    add(v) {
+    add2(v) {
         this.x += v.x
         this.y += v.y
     }
 
-    sub(v) {
+    sub2(v) {
         this.x -= v.x
         this.y -= v.y  
     }
 
-    scaler(a) {
+    scaler2(a) {
         this.x *= a.x
         this.y *= a.y
     }
 
-    dot(v) {
+    dot2(v) {
         return (this.x * v.x) + (this.y * v.y)
     }
 }
